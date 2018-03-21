@@ -29,7 +29,7 @@ var cloudy = data.weather[0].id >= 801 && data.weather[0].id <= 804;
 var day  = data.dt > data.sys.sunrise && data.dt < data.sys.sunset;
 var night = !day;
 var celcius = ((data.main.temp - 32) * 5) / 9;
-
+var tempUnit = "F";
 
 
 
@@ -54,8 +54,19 @@ var celcius = ((data.main.temp - 32) * 5) / 9;
         } else {
         $("#temp").append(Math.round(celcius) + String.fromCharCode(176) + "C").hide().fadeIn(1000);
         }
-        // Display Farenheit (toggle)
-        // $("#far").append('<img class="metric" src="images/SVG/f.svg" width="50px" height="50px">').hide().fadeIn(1000);
+        // Display Farenheit / Celcius (toggle)
+        $("#temp").click(function(){
+            if(tempUnit == "F") {
+                tempUnit = "C";
+                $("#temp").html('');
+                $("#temp").append(Math.round(celcius) + String.fromCharCode(176) + "C").hide().fadeIn(1000);
+            } else {
+                tempUnit = "F";
+                $("#temp").html('');
+                $("#temp").append(Math.round(data.main.temp) + String.fromCharCode(176) + "F").hide().fadeIn(1000);
+            }
+            
+        });
 
         
         // Weather Code # 200-232 - Thunderstorm
