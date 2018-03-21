@@ -1,0 +1,139 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: black;
+}
+
+
+h1#weatherLocation {
+	color: white;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	font-weight: lighter;
+}
+
+h1 {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	font-weight: lighter;
+
+}
+
+h3 {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	font-weight: lighter;
+}
+
+#container {
+
+}
+
+.load {
+	height: 100%;
+	width: 100%;
+	background-size: 100%;
+	position: absolute;
+	background-repeat: no-repeat;
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+#filter {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(
+                rgba(20,20,20, .3), 
+                rgba(20,20,20, .3));
+	z-index: 1;
+}
+
+#weatherTitle {
+	border: 5px solid white;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+	margin-top: 15%;
+}
+
+#condition {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#conditionContainer {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#tempContainer {
+	margin: 0 auto;
+	text-align: center;
+
+}
+
+#locationContainer {
+	margin: 0 auto;
+	text-align: center;
+
+}
+
+.metric {
+	margin: 0;
+	margin-right: -55px;
+	padding: 0;
+}
+
+#temp {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	font-weight: lighter;
+	font-size: 32px;
+}
+
+#far {
+	margin-top: 30px;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	font-weight: lighter;
+}
